@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: block;
+  
+    margin: 20px;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  /* Mobile (max width 768px) */
+  @media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+  
+    ul {
+        /* Adjust styles for mobile */
+    }
+  
+    li {
+        /* Adjust styles for mobile */
+    }
+  }
+  
+  /* Tablet (min width 769px and max width 1024px) */
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 16px; /* Adjust font size for tablets */
+    }
+  
+    ul {
+        /* Adjust styles for tablets */
+    }
+  
+    li {
+        /* Adjust styles for tablets */
+    }
+  }
+  
+  /* Desktop (min width 1025px and max width 1440px) */
+  @media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    /* Your desktop styles go here */
+    body {
+        background-color: lightgray; /* Example background color for desktop */
+    }
+  }
+  
+  /* Display (min width 1440px with no max width) */
+  @media only screen and (min-width: 1440px) {
+    /* Your display styles go here */
+    body {
+        background-color: white; /* Example background color for display */
+    }
+  }
