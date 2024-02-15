@@ -69,10 +69,12 @@ section{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(./img/back1.jpg) no-repeat ;
-    background-size: cover;
-    background-position: center;
+    background: url(./imgs/Home.jpg) no-repeat ;
+    background-size:cover;
+    background-position:top;
     background-attachment: fixed;
+    
+    
 }
 .main h2{
     color: #fff;
@@ -277,6 +279,7 @@ label {
   background-color: #F2F2F2;
   padding: 20px;
 }
+
 form{
     display: flex;
     flex-direction: column;
