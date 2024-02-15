@@ -40,7 +40,7 @@ const monday = [
     }
   ];
   
-  const hourlyRate = 40; // €20/hour
+  const hourlyRate = 20; // €20/hour
   
   //tasks to durations in hours
   const durations = [...monday, ...tuesday].map(task => task.duration / 60);

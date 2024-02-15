@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Files</title>
+    <style>
+      .card {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="homeworkCard">
+      <h2>Homework Files</h2>
+      <ul id="homeworkList"></ul>
+    </div>
+    <script>
+    //   const apiUrl = `https://api.github.com/repos/ftahhan0/ftahhan0.github.io/contents/homeworks`;
+    const apiUrl = 'https://api.github.com/repos/ftahhan0/ftahhan0.github.io/contents/homeworks/JavaScript1';
+      fetch(apiUrl)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(
+              `Failed to fetch homework files: ${response.status} ${response.statusText}`,
+            );
+          }
+          return response.json();
+        })
+        .then((homeworkList) => {
+          const homeworkListElement = document.getElementById('homeworkList');
+          homeworkList.forEach((file) => {
+            console.log(file); /// 1
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = file.html_url;
+            link.textContent = file.name;
+            listItem.appendChild(link);
+            homeworkListElement.appendChild(listItem);
+          });
+        })
+        .catch((error) => {
+          console.error(`Error fetching homework files: ${error.message}`);
+        });
+    </script>
+  </body>
+</html>
+
+
+
+<!-- 
+
+9:57
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Files</title>
+    <style>
+      .card {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="homeworkCard">
+      <h2>Homework Files</h2>
+      <ul id="homeworkList"></ul>
+    </div>
+    <script>
+      const apiUrl = `https://api.github.com/repos/ftahhan0/ftahhan0.github.io/contents/homeworks`;
+      fetch(apiUrl)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(
+              `Failed to fetch homework files: ${response.status} ${response.statusText}`,
+            );
+          }
+          return response.json();
+        })
+        .then((homeworkList) => {
+          const homeworkListElement = document.getElementById('homeworkList');
+          homeworkList.forEach((file) => {
+            console.log(file); /// 1
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = file.html_url;
+            link.textContent = file.name;
+            listItem.appendChild(link);
+            homeworkListElement.appendChild(listItem);
+          });
+        })
+        .catch((error) => {
+          console.error(`Error fetching homework files: ${error.message}`);
+        });
+    </script>
+  </body>
+</html> -->
