@@ -34,6 +34,4 @@ fetch(apiUrl)
     console.error(`Error fetching homework files: ${error.message}`);
   });
 
-
-
   
